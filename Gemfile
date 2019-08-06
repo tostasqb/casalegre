@@ -4,15 +4,20 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.6.3'
 
 gem 'rails', '~> 5.2.3'
-gem 'sqlite3'
+gem 'pg', group: :production
+
+gem 'dotenv-rails', groups: [:development, :test]
+
 gem 'puma', '~> 3.11'
 gem 'uglifier', '>= 1.3.0'
 gem 'bootsnap', '>= 1.1.0', require: false
 
 gem 'solidus'
 gem 'solidus_auth_devise'
+gem 'aws-sdk', '< 2.0'
 
 group :development, :test do
+  gem 'sqlite3'
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
 
