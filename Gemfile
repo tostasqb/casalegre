@@ -8,7 +8,7 @@ gem 'pg', group: :production
 
 gem 'dotenv-rails', groups: [:development, :test]
 
-gem 'puma', '~> 3.11'
+gem 'puma', '~> 3.12'
 gem 'uglifier', '>= 1.3.0'
 gem 'bootsnap', '>= 1.1.0', require: false
 
